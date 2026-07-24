@@ -67,7 +67,7 @@
         @change="handleTableChange"
       >
         <template #bodyCell="{ column, record }">
-          <template v-else-if="column.key === 'is_read'">
+          <template v-if="column.key === 'is_read'">
             <a-tag v-if="record.is_read" color="green">已确认</a-tag>
             <a-tag v-else color="red">未确认</a-tag>
           </template>
